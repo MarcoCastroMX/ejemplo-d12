@@ -8,6 +8,15 @@
 </head>
 <body>
     <h1>PAGINA DE INFORMACION</h1>
+    <ul>
+        <li>
+            <a href="/informacion">Informacion</a>
+        </li>
+        <li>
+            <a href="/contacto">Contacto</a>
+        </li>
+    </ul>
+    {{--
     @if ($nombre == "Marco")
         Hola {{$nombre}}
     @else 
@@ -15,5 +24,8 @@
     @endif
     <br>
     Hola {{$nombre_completo}}
+    --}}
+    
+
 </body>
 </html>

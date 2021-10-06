@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>Página de Contacto</h1>
+    <ul>
+        <li>
+            <a href="/informacion">Informacion</a>
+        </li>
+        <li>
+            <a href="/contacto">Contacto</a>
+        </li>
+    </ul>
 </body>
 </html>
