@@ -16,5 +16,18 @@
             <a href="{{route("contacto")}}">Contacto</a>
         </li>
     </ul>
+
+    <form action="" method="POST">
+        <label for="correo">Correo</label><br>
+        <input type="text" name="correo">
+        <br>
+        <label for="comentario">Comentario</label><br>
+        <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>
+        <br>
+        <label for="telefono">Telefon</label><br>
+        <input type="text" name="telefono" id="telefono">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
