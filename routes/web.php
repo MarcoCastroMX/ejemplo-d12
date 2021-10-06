@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 //Route::get('/informacion/{nombre}/{apellido?}',[PaginasController::class, "informacion"]);
 
-Route::get('/informacion',[PaginasController::class, "informacion"]);
+Route::get('/info',[PaginasController::class, "informacion"])->name("info");
 
-Route::get('/contacto',[PaginasController::class, "contacto"]);
+Route::get('/contacto',[PaginasController::class, "contacto"])->name("contacto");

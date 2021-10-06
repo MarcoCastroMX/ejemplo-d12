@@ -10,10 +10,10 @@
     <h1>PAGINA DE INFORMACION</h1>
     <ul>
         <li>
-            <a href="/informacion">Informacion</a>
+            <a href="{{action([App\Http\Controllers\PaginasController::class, 'informacion'])}}">Informacion</a>
         </li>
         <li>
-            <a href="/contacto">Contacto</a>
+            <a href="{{action([App\Http\Controllers\PaginasController::class, 'contacto'])}}">Contacto</a>
         </li>
     </ul>
     {{--

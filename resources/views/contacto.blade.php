@@ -10,10 +10,10 @@
     <h1>Página de Contacto</h1>
     <ul>
         <li>
-            <a href="/informacion">Informacion</a>
+            <a href="{{route("info")}}">Informacion</a>
         </li>
         <li>
-            <a href="/contacto">Contacto</a>
+            <a href="{{route("contacto")}}">Contacto</a>
         </li>
     </ul>
 </body>
