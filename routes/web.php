@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/informacion/{nombre}/{apellido?}',function($nombre, $apellido = null){
+    $nombre_completo = strtoupper($nombre . " " . $apellido);
+
+    return view('informacion',compact("nombre")) 
+        -> with(["nombre_completo" => $nombre_completo]);
+});
+
+Route::get('/contacto',function(){
+    return view('contacto');
+});
