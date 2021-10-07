@@ -33,10 +33,14 @@ class PaginasController extends Controller
             "created_at" => now(),
             "updated_at" => now(),
         ]);*/
+        $request->validate([
+            "correo" => "required|email",
+            "comentario" => ["required","min:10"],
+        ]);
         $contacto = new Contacto();
         $contacto ->correo = $request->correo;
         $contacto ->comentario = $request->comentario;
-        $contacto ->telefono = $request->telefono;
+        $contacto ->telefono = $request->telefono ?? "";
         $contacto->save();
         return redirect()->route("contacto");
     }

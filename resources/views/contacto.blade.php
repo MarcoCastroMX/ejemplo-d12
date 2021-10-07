@@ -16,14 +16,22 @@
             <a href="{{route("contacto")}}">Contacto</a>
         </li>
     </ul>
-
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="{{route("recibe-contacto")}}" method="POST">
         @csrf
         <label for="correo">Correo</label><br>
-        <input type="text" name="correo">
+        <input type="text" name="correo" required>
         <br>
         <label for="comentario">Comentario</label><br>
-        <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>
+        <textarea name="comentario" id="comentario" cols="30" rows="5" required></textarea>
         <br>
         <label for="telefono">Telefono</label><br>
         <input type="text" name="telefono" id="telefono">
