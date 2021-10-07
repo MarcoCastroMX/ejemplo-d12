@@ -23,3 +23,5 @@ Route::get('/', function () {
 Route::get('/about',[PaginasController::class, "informacion"])->name("info");
 
 Route::get('/contacto',[PaginasController::class, "contacto"])->name("contacto");
+
+Route::post("/contacto",[PaginasController::class, "recibeContacto"])->name("recibe-contacto");

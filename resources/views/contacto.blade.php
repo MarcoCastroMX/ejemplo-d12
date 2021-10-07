@@ -17,14 +17,15 @@
         </li>
     </ul>
 
-    <form action="" method="POST">
+    <form action="{{route("recibe-contacto")}}" method="POST">
+        @csrf
         <label for="correo">Correo</label><br>
         <input type="text" name="correo">
         <br>
         <label for="comentario">Comentario</label><br>
         <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>
         <br>
-        <label for="telefono">Telefon</label><br>
+        <label for="telefono">Telefono</label><br>
         <input type="text" name="telefono" id="telefono">
         <br>
         <input type="submit" value="Enviar">
