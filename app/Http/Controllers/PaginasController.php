@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contacto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -25,13 +26,18 @@ class PaginasController extends Controller
     public function recibeContacto(Request $request){
         //dd($request->all());
         //dd($request->correo);
-        DB::table("contactos")->insert([
+        /*DB::table("contactos")->insert([
             "correo" => $request->correo,
             "comentario" => $request->comentario,
             "telefono" => $request->telefono,
             "created_at" => now(),
             "updated_at" => now(),
-        ]);
+        ]);*/
+        $contacto = new Contacto();
+        $contacto ->correo = $request->correo;
+        $contacto ->comentario = $request->comentario;
+        $contacto ->telefono = $request->telefono;
+        $contacto->save();
         return redirect()->route("contacto");
     }
 }
