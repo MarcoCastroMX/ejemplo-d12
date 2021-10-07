@@ -19,13 +19,12 @@
     {{--
     @if ($nombre == "Marco")
         Hola {{$nombre}}
-    @else 
+    @else
         Hola Extraño
     @endif
     <br>
     Hola {{$nombre_completo}}
     --}}
     
-
 </body>
 </html>
